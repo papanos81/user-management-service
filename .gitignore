@@ -1,4 +1,8 @@
 src/__pycache__
+src/config_db.ini
 env
 .pytest_cache
 tests/__pycache__
+src/controllers/__pycache__
+src/model/__pycache__
+src/dao/__pycache__
