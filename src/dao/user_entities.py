@@ -19,13 +19,9 @@ config_data.read('src/config_db.ini')
 
 USERNAME = config_data['DATABASE_CREDENTIALS']['username']
 PASSWORD = config_data['DATABASE_CREDENTIALS']['password']
-URI = "neo4j://localhost:7687"
-AUTH = ("neo4j", "Kidos1416")
 
 config.DATABASE_URL = f'bolt://{USERNAME}:{PASSWORD}@localhost:7687'  # default
 
-
-#TODO add constraint on the uniqueId and the username
 class User(StructuredNode):
     unique_id = UniqueIdProperty()
     username = StringProperty(unique_index=True, required=True)
